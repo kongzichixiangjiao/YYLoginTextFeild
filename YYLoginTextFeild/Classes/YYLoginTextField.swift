@@ -417,7 +417,7 @@ open class YYLoginTextField: UIView {
     
     private func getImageBundle() -> Bundle {
         let bundle = Bundle(for: YYLoginTextField.self)
-        let url = bundle.url(forResource: "Source", withExtension: "Bundle")
+        let url = bundle.url(forResource: "Source", withExtension: "bundle")
         let imageBundle = Bundle(url: url!)
         return imageBundle!
     }
