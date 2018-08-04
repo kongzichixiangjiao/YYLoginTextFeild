@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.source_files = "YYLoginTextFeild/Classes/**/*" # "Classes/*.{h,m,swift}" # 你代码的位置， Classes/*.{h,m} 表示 Classes 文件夹下所有的.h和.m文件
   #资源文件地址
   s.resource_bundles = {
-    'YYLoginTextFeild' => ['YYLoginTextFeild/Source/*.png']
+    'YYLoginTextFeild' => ['YYLoginTextFeild/Source/**/*']
   }
 
   s.requires_arc = true # 是否启用ARCS
