@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "YYLoginTextFeild" # 项目名称
-  s.version      = "0.1.2"        # 版本号 与 你仓库的 标签号 对应
+  s.version      = "0.1.3"        # 版本号 与 你仓库的 标签号 对应
   s.license      = "MIT"          # 开源证书
   s.summary      = "YYLoginTextFeild" # 项目简介
 
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.source_files = "YYLoginTextFeild/Classes/**/*" # "Classes/*.{h,m,swift}" # 你代码的位置， Classes/*.{h,m} 表示 Classes 文件夹下所有的.h和.m文件
   #资源文件地址
   s.resource_bundles = {
-    'YYLoginTextFeild' => ['YYLoginTextFeild/Source/*.png']
+    'YYLoginTextFeild' => ['YYLoginTextFeild/Source.Bundle/*.png']
   }
 
   s.requires_arc = true # 是否启用ARC
