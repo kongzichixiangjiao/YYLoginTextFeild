@@ -219,7 +219,7 @@ open class YYLoginTextField: UIView {
             textField.textColor = textFieldColor_yy
         }
     }
-
+    
     // 验证码按钮
     @IBInspectable var verificationCodeColor_yy: UIColor = UIColor.white {
         didSet {
@@ -251,6 +251,8 @@ open class YYLoginTextField: UIView {
     // 左侧icon
     lazy var icon: UIImageView = {
         let v = UIImageView(frame: CGRect.zero)
+        v.image = getImage(named: "yyLoginTextfield_code_icon")
+        v.frame = CGRect(x: iconLeftSpace, y: self.frame.size.height / 2 - v.image!.size.height / 2 + iconTop, width: v.image!.size.width, height: v.image!.size.height)
         self.addSubview(v)
         return v
     }()
@@ -262,6 +264,7 @@ open class YYLoginTextField: UIView {
         v.delegate = self
         v.placeholder = "输入内容是..."
         v.font = UIFont.systemFont(ofSize: 12)
+        v.textColor = UIColor.white
         v.addTarget(self, action: #selector(textFieldEditingChanged(sender: )), for: .editingChanged)
         self.addSubview(v)
         return v
@@ -321,7 +324,7 @@ open class YYLoginTextField: UIView {
     // 清空按钮方法
     @objc func clearAction(sender: UIButton) {
         textField.text = ""
-        sender.isHidden = true 
+        sender.isHidden = true
     }
     
     // 密码眼睛方法
@@ -407,13 +410,13 @@ open class YYLoginTextField: UIView {
         super.awakeFromNib()
     }
     
-//    public override init(frame: CGRect) {
-//        super.init(frame: frame)
-//    }
-//    
-//    required public init?(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
+    //    public override init(frame: CGRect) {
+    //        super.init(frame: frame)
+    //    }
+    //
+    //    required public init?(coder aDecoder: NSCoder) {
+    //        fatalError("init(coder:) has not been implemented")
+    //    }
     
     private func getImageBundle() -> Bundle {
         let bundle = Bundle(for: YYLoginTextField.self)
